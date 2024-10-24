@@ -1,0 +1,52 @@
+[
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_01-600x800.jpg",
+    "name":"Chriss Moore",
+    "title":"Visual Elements of User Interface Design",
+    "price":"$200"
+},
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_02.jpg",
+    "name":"Joss Whedon",
+    "title":"Photography Techniques: Light, Content & Sharing",
+    "price":"$200"
+},
+{
+    "image":"https://img.freepik.com/free-photo/hands-with-laptop-wooden-table-coffee-cafe_53876-16124.jpg?t=st=1729747908~exp=1729751508~hmac=c71cebd4cb2f95e3e97c7f202de7df56c029a6a1ebb1375cc86e572e4ba6b12a&w=740",
+    "name":"James Taylor",
+    "title":"Teach English Now! Foundational Principles",
+    "price":"$200"
+},
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_04.jpg",
+    "name":"Nicole Brown",
+    "title":"Responsive Website Development & Design",
+    "price":"$200"
+},
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_05.jpg",
+    "name":"Lauren Davis",
+    "title":"Positive Psychology: Character & Research",
+    "price":"$200"
+},
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_06.jpg",
+    "name":"Christina Rose",
+    "title":"Developing Android Apps with App Inventor",
+    "price":"$200"
+},
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_07.jpg",
+    "name":"Christina Rose",
+    "title":"Google IT Support Professional Certificate",
+    "price":"$200"
+},
+{
+    "image":"https://wgl-dsites.net/iguru/wp-content/uploads/2019/07/courses_08.jpg",
+    "name":"David Leto",
+    "title":"Managerial Economics & Business Analysis",
+    "price":"$200"
+}
+
+
+]

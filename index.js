@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 ////////////////mongodb/////////////////////////////
 
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USERTREE}:${process.env.DB_PASSTREE}@cluster0.ruz4b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -64,10 +64,42 @@ async function run() {
         res.send( result )
 
     })
-    
 
+    app.get('/courseData/:id',  async(req, res) => {
+      
+      const id = req.params.id 
+      const query = { _id: new ObjectId(id)}
+      const result = await courseCollection.findOne(query)
+      res.send(result)
+  
+     }) 
 
     ////courseData///////////
+
+
+    /////all blogs data/////////
+
+    const allBlogsCollection = client.db('ABlogsDB').collection('ABlogsData')
+
+    app.get('/ABlogsData', async(req, res) => {
+     
+        const cursor = allBlogsCollection.find();
+        const result = await cursor.toArray();
+        res.send( result )
+
+    })
+
+    app.get('/ABlogsData/:id', async(req, res) => {
+     
+       const id = req.params.id 
+       const query = { _id: new ObjectId(id) }
+       const result = await allBlogsCollection.findOne(query)
+       res.send(result)
+
+    })
+
+
+    /////all blogs data/////////
 
 
 

@@ -100,7 +100,28 @@ async function run() {
 
 
     /////all blogs data/////////
+   
 
+
+    //////shopData//////////
+
+    const treeShopCollection = client.db('treeShopDB').collection('treeShopData')
+    
+    
+    app.get('/treeShopData', async(req, res) => {
+     
+       const cursor = treeShopCollection.find()
+       const result = await cursor.toArray()
+       res.send(result)
+
+    })
+
+
+
+
+
+
+    //////shopData//////////
 
 
 

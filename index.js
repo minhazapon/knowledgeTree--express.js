@@ -151,6 +151,64 @@ async function run() {
       res.send(result)
 
     }) 
+    
+
+    ///delete////////////
+
+       
+    app.delete('/productData/:id', async(req, res) => {
+       
+      const id = req.params.id 
+      const query = { _id: new ObjectId(id) }
+      const result = await productsAddedCollection.deleteOne(query)
+      res.send(result)
+      
+    }) 
+
+
+    /////update/////////////
+     
+
+    app.get('/productData/:id', async(req, res) => {
+       
+       const id = req.params.id 
+       const query = { _id: new ObjectId(id) }
+       const result = await productsAddedCollection.findOne(query)
+       res.send(result)    
+       
+       
+    }) 
+
+
+    app.put('/productData/:id', async(req, res) => {
+       
+          const id = req.params.id 
+          const upUsr = req.body 
+          console.log(id, upUsr)
+          const filter = { _id: new ObjectId(id) }
+          const option = { upsert: true }
+          const updateUser = req.body
+          
+          
+          const upz = {
+
+
+           $set: {
+
+              url: updateUser.url,
+              title: updateUser.title,
+              price: updateUser.price
+
+           }
+          }
+
+          const result = await productsAddedCollection.updateOne(filter, upz, option)
+          res.send(result)
+       
+    }) 
+
+    
+
 
      
 

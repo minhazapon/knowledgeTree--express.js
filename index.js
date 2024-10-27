@@ -121,6 +121,51 @@ async function run() {
 
 
 
+    ///crud operation//////////////////
+
+
+
+    const productsAddedCollection = client.db('productsDB').collection('productData')
+    
+
+    ////add/////
+
+    app.post('/productData', async(req, res) => {
+     
+          const productData = req.body 
+          console.log(productData)
+          const result = await productsAddedCollection.insertOne(productData)
+          res.send(result)
+
+    })
+
+     ////add/////
+
+
+    ///////read///////////
+    
+    app.get('/productData', async(req, res) => {
+     
+      const cursor = productsAddedCollection.find();
+      const result = await cursor.toArray();
+      res.send(result)
+
+    }) 
+
+     
+
+
+
+        
+
+
+
+
+
+    ///crud operation//////////////////
+
+
+
 
 
     await client.db("admin").command({ ping: 1 });
